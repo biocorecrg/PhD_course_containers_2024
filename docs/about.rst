@@ -8,20 +8,17 @@ About the course
    :toctree: generated
 
 
-This slow-paced hands-on course is designed for absolute beginners who want to start using  `Nextflow DSL2 <https://www.nextflow.io>`_ to achieve reproducibility of the data analysis.
+This slow-paced hands-on course is designed for absolute beginners who want to start using scientific containers to achieve reproducibility of the data analysis.
 
-* `Course page <https://www.crg.eu/en/event/coursescrg-reproducible-research-and-data-analysis-using-containers-nextflow-2022>`_
+* `Course page <https://github.com/biocorecrg/CRG_Containers_June_2022>`_
 
-
-.. |luca| image:: images/lcozzuto.jpg
-  :alt: Alternative text
 
 .. |toni| image:: images/thermoso.jpg
   :alt: Alternative text
   
-.. |jespi| image:: images/jespinosa.jpg
+.. |luca| image:: images/lcozzuto.jpg
   :alt: Alternative text
-
+  
 .. |julia| image:: images/jponomarenko.jpg
   :alt: Alternative text
 
@@ -31,25 +28,17 @@ This slow-paced hands-on course is designed for absolute beginners who want to s
    :widths: 50 50 50 50
    :header-rows: 1
 
-   * - Luca Cozzuto
-     - Toni Hermoso
-     - Jose Espinosa-Carrasco
+   * - Toni Hermoso
+     - Luca Cozzuto
      - Julia Ponomarenko
-   * - |luca|
-     - |toni|
-     - |jespi|
+   * - |toni|
+     - |luca|
      - |julia|
 
 .. _home-page-outline:
 
 Outline
 ============
-
-This Linux Containers and Nextflow course will train participants to build Nextflow pipelines and run them with `Singularity <https://sylabs.io/singularity/>`_ containers.
-
-It is designed to provide trainees with short and frequent hands-on sessions, while keeping theoretical sessions to a minimum.
-
-The course will be fully virtual via the `Zoom <https://zoom.us/>`_ platform. The link will be provided via the `CRG learning platform <https://moodle.crg.eu/>`_.
 
 .. 
         Trainees will work in a dedicated `AWS environment <https://en.wikipedia.org/wiki/AWS/>`_.
@@ -62,14 +51,7 @@ Learning objectives
 
 * Locate and fetch Docker/Singularity images from dedicated repositories.
 * Execute/Run a Docker/Singularity container from the command line.
-* Locate and fetch Nextflow pipelines from dedicated repositories.
-* Execute/Run a Nextflow pipeline.
-* Describe and explain Nextflow basic concepts.
-* Test and modify a Nextflow pipeline.
-* Implement short blocks of code into a Nextflow pipeline.
-* Develop a Nextflow pipeline from scratch.
-* Run a pipeline in diverse computational environments (local, HPC, cloud).
-* Share a pipeline.
+* Build simple Docker container images
 
 .. _home-page-prereq:
 
@@ -91,12 +73,12 @@ Having a `GitHub account <https://github.com/join>`_ is recommended.
 Dates, time, location
 ============
 
-* Dates: Monday May 30 - Friday June 3, 2022. Tuesday June 7, 2022
+* Dates: Wednesday June 29, 2022
 
-* 9:30 - 13:30 **CET**
+* 9:30 - 17:30 **CET**
 
 
-* Location: virtual, via Zoom.
+* Location: Training room
 
 .. _home-page-program:
 
@@ -113,50 +95,8 @@ Day 1: Introduction to Linux containers and Docker (May 30)
 * 09:30-11:00 Introduction to containers and Docker
 * 11:00-11:30 Break
 * 11:30-13:30 Docker
-
-.. _home-page-day2:
-
-Day 2: Docker and Singularity (May 31)
--------------
-
 * 09:30-11:00 More advanced Docker
 * 11:00-11:30 Coffee break
 * 11:30-13:30 Singularity
 
-.. _home-page-day3:
 
-Day 3: Understand and run a basic Nexflow pipeline (June 1)
--------------
-
-* 09:30-11:00 Introduction to Nextflow
-* 11:00-11:30 Coffee break
-* 11:30-13:30 Making simple scripts
-
-.. _home-page-day4:
-
-Day 4: Write, modify and run a complex pipeline (June 2)
--------------
-
-* 09:30-11:00 Decoupling params, resources and main script
-* 11:00-11:30 Coffee break
-* 11:30-13:30 Using public pipelines
-
-.. _home-page-day5:
-
-Day 5: Run a Nextflow pipeline in different environments, share and report (June 3)
--------------
-
-* 09:30-11:00 Profiles and cloud
-* 11:00-11:30 Coffee break
-* 11:30-13:30 Modules and Tower
-
-.. _home-page-day6:
-
-Day 6: nf-core (June 7)
--------------
-
-* 09:30-10:30 Introduction to nf-core (TBC)
-* 10:30-11:00 nf-core for users I (TBC)
-* 11:00-11:30 Coffee break (TBC)
-* 11:30-12:30 nf-core for users II (TBC)
-* 12:30-13:30 nf-core for developers (TBC)

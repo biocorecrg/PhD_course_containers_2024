@@ -1,11 +1,11 @@
 .. _home-page:
 
 *******************
-Courses @ CRG: Reproducible research and data analysis using Containers & Nextflow 2022
+Scientific Containers: Docker and Singularity - June 2022
 *******************
 
 
-`GitHub repository <https://github.com/biocorecrg/CoursesCRG_Containers_Nextflow_May_2022>`_
+`GitHub repository <https://github.com/biocorecrg/CRG_Containers_June_2022>`_
 
 Contents:
 
@@ -17,7 +17,3 @@ Contents:
    docker
    docker_2
    singularity
-   nextflow_1
-   nextflow_2
-   nextflow_3
-   nf-core

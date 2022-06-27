@@ -2,22 +2,20 @@
 
 Reproducible research and data analysis using Containers & Nextflow
 
-* [Course page](https://www.crg.eu/en/event/coursescrg-reproducible-research-and-data-analysis-using-containers-nextflow-2022)
-* [Course materials](https://biocorecrg.github.io/CoursesCRG_Containers_Nextflow_May_2022)
+* [Course page](https://github.com/biocorecrg/CRG_Containers_June_2022)
+* [Course materials](https://biocorecrg.github.io/CRG_Containers_June_2022)
 
 
 
 ## About the course
 
-This slow-paced hands-on course is designed for absolute beginners who want to start using Linux Containers ([Docker](https://www.docker.com/) and [Singularity](https://www.apptainer.org/)) and [Nextflow](https://www.nextflow.io) to achieve reproducibility of data analysis. 
+This slow-paced hands-on course is designed for absolute beginners who want to start using Linux Containers ([Docker](https://www.docker.com/) and [Singularity](https://www.apptainer.org/)). 
 
 ### Outline
 
 The course will train participants to build Nextflow pipelines and run them with Linux containers.
 
 It is designed to provide trainees with short and frequent hands-on sessions, while keeping theoretical sessions to a minimum.
-
-The course will be fully virtual via the [Zoom](https://zoom.us/) platform.
 
 <!--Trainees will work in a dedicated [AWS environment](https://en.wikipedia.org/wiki/AWS).-->
 
@@ -26,14 +24,7 @@ The course will be fully virtual via the [Zoom](https://zoom.us/) platform.
 
 * Locate and fetch Docker/Singularity images from dedicated repositories.
 * Execute/Run a Docker/Singularity container from the command line.
-* Locate and fetch Nextflow pipelines from dedicated repositories.
-* Execute/Run a Nextflow pipeline.
-* Describe and explain Nextflow basic concepts.
-* Test and modify a Nextflow pipeline.
-* Implement short blocks of code into a Nextflow pipeline.
-* Develop a Nextflow pipeline from scratch.
-* Run a pipeline in diverse computational environments (local, HPC, cloud).
-* Share a pipeline.
+* Build simple Docker container images
 
 ### Prerequisite / technical requirements
 
@@ -66,32 +57,6 @@ Having a [GitHub account](https://github.com/join) is recommended.
 * 09:30-11:00 More advanced Docker
 * 11:00-11:30 Coffee break
 * 11:30-13:30 Singularity
-
-### Day 3: Understand and run a basic Nexflow pipeline (June 1)
-
-* 09:30-11:00 Introduction to Nextflow
-* 11:00-11:30 Coffee break
-* 11:30-13:30 Making simple scripts
-
-### Day 4: Write, modify and run a complex pipeline (June 2)
-
-* 09:30-11:00 Decoupling params, resources and main script
-* 11:00-11:30 Coffee break
-* 11:30-13:30 Using public pipelines
-
-### Day 5: Run a Nextflow pipeline in different environments, share and report (June 3)
-
-* 09:30-11:00 Profiles and cloud
-* 11:00-11:30 Coffee break
-* 11:30-13:30 Modules and Tower
-
-### Day 6: nf-core (June 7)
-
-* 09:30-10:30 Introduction to nf-core (TBC)
-* 10:30-11:00 nf-core for users I (TBC)
-* 11:00-11:30 Coffee break (TBC)
-* 11:30-12:30 nf-core for users II (TBC)
-* 12:30-13:30 nf-core for developers (TBC)
 
 ## Acknowledgements
 
