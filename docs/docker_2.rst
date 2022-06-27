@@ -150,20 +150,11 @@ Then let's check the ID of the image and run it!
 More instructions
 *****************
 
-**MAINTAINER**
-
-Who is maintaining the container?
-
-.. code-block::
-  MAINTAINER Toni Hermoso Pulido <toni.hermoso@crg.eu>
-
-
 **WORKDIR**: all subsequent actions will be executed in that working directory
 
 .. code-block::
 
   WORKDIR ~
-
 
 **ADD, COPY**: add files to the image filesystem
 
@@ -288,40 +279,6 @@ To tag a local image with ID "e23aaea5dff1" into the "ubuntu_wget" image name re
 
   docker tag e23aaea5dff1 ubuntu_wget:1.0
 
-
-Build cache
-------------
-
-Every line of a Dockerfile is actually an image/layer by itself.
-
-Modify for instance the last bit of the previous image (let's change the image URL) and rebuild it (even with a different name/tag):
-
-.. code-block::
-
-  FROM ubuntu:18.04
-
-  MAINTAINER Toni Hermoso Pulido <toni.hermoso@crg.eu>
-
-  WORKDIR ~
-
-  RUN apt-get update && apt-get -y upgrade
-  RUN apt-get install -y wget
-
-  ENTRYPOINT ["/usr/bin/wget"]
-  CMD ["https://cdn-images-1.medium.com/max/1600/1*_NQN6_YnxS29m8vFzWYlEg.png"]
-
-
-.. code-block:: console
-
-  docker build -t mytestimage2 .
-
-
-It will start from the last line.
-This is OK most of the times and very convenient for testing and trying new steps, but it may lead to errors when versions are updated (either FROM image or included packages). For that it is benefitial to start from scratch with ```--no-cache``` tag.
-
-.. code-block:: console
-
-  docker build --no-cache -t mytestimage2 .
 
 Build exercise
 --------------

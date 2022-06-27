@@ -320,69 +320,11 @@ Remove ALL non-running containers, images, etc. - **DO WITH MUCH MORE CARE!!!**
 * Reference: https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes
 
 
-Exercises
----------
-
-* 1 - **Alpine**
-
-* **Search** and **pull** the `alpine` image (tag **3.12**) - it is an **official build**.
-
-* Can you run a container from this image and make it print a “hello world” message?
-
-* Now run a container **interactively** from the same image.
-
-    * Run `whoami` in the container.
-
-    * Exit the container and run `whoami` on the host machine: do you get the same output?
-
-* Restart the container you just exited:
-
-    * Is it now running?
-
-    * Make the container execute the command `ls`.
-
-    * Stop the container.
-
-* Remove the alpine image and all its containers (running or stopped).
+Exercise
+--------
 
 
-
-.. raw:: html
-
-   <details>
-   <summary><a>Suggested solution</a></summary>
-
-.. code-block:: console
-
-  # Search and pull the alpine image (tag 3.12) - it is an official build.
-  docker search alpine --filter is-official=true
-  docker pull  alpine:3.12
-  # Can you run a container from this image and make it print a “hello world” message?
-  docker run alpine:3.12 echo "hello world"
-  # Now run a container **interactively** from the same image.
-  docker run --detach alpine:3.12 tail -f /dev/null
-    # Run `whoami`
-    whoami
-    # Exit the container.
-    exit
-  # Restart the container you just exited: is it now running?
-  docker restart CONTAINER_ID # find it with `docker ps -a`
-  # Make the container execute the command `ls`
-  docker exec CONTAINER_ID ls
-  # Stop the container
-  docker stop CONTAINER_ID
-  # Remove the alpine image and all its containers (running or stopped)
-  docker rmi alpine:3.12
-  docker rm CONTAINER_ID # check all containers with `docker ps -a`
-
-
-.. raw:: html
-
-  </details>
-
-
-
-* 2 - **Imagemagick**
+* - **Imagemagick**
 
 * Pull the imagemagick image that is official and that has the highest number of stars
 

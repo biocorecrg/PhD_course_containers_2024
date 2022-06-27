@@ -199,15 +199,6 @@ Docker bootstrap
 Singularity advanced aspects
 ============================
 
-Sandboxing
-----------
-
-.. code-block:: console
-
-  singularity build --sandbox ./sandbox docker://ubuntu:18.04
-  touch sandbox/etc/myetc.conf
-  singularity build sandbox.sif ./sandbox
-
 
 Bind paths (aka volumes)
 ------------------------
@@ -266,48 +257,6 @@ Using the 2 fastq available files, process them outside and inside a mounted dir
 .. raw:: html
 
   </details>
-
-
-
-
-Instances
----------
-
-Also know as **services**. Despite Docker it is still more convenient for these tasks, it allows enabling thing such as webservices (e.g., via APIs) in HPC workflows.
-
-As a simple example, first we create a boostrapped image:
-
-.. code-block::
-
-  Bootstrap: docker
-  From: library/mariadb:10.3
-
-  %startscript
-          mysqld
-
-
-.. code-block:: console
-
-  sudo singularity build mariadb.sif mariadb.singularity
-
-  mkdir -p testdir
-  mkdir -p testdir/db
-  mkdir -p testdir/socket
-
-  singularity exec -B ./testdir/db:/var/lib/mysql mariadb.sif mysql_install_db
-
-  singularity instance start -B ./testdir/db:/var/lib/mysql -B ./testdir/socket:/run/mysqld mariadb.sif mydb
-
-  singularity instance list
-
-  singularity exec instance://mydb mysql -uroot
-
-  singularity instance stop mydb
-
-More information:
-
-* `https://apptainer.org/docs/user/main/running_services.html <https://apptainer.org/docs/user/main/running_services.html>`__
-* `https://apptainer.org/docs/user/main/networking.html <https://apptainer.org/docs/user/main/networking.html>`__
 
 
 Singularity tips
