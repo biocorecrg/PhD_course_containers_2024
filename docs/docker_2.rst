@@ -392,7 +392,3 @@ Note about the tar formats
 * On the other hand, tar files generated with **export** they simply contantain the image filesystem. You lost that way a lot of metadata associated to the original image, such as the tags, but also things such as ENTRYPOINT and CMD instructions.
 
 
-Exercises
-=========
-
-We explore interactively the different examples in the containers/docker folders.

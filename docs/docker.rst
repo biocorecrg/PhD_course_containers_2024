@@ -326,7 +326,7 @@ Exercise
 
 * - **Imagemagick**
 
-* Pull the imagemagick image that is official and that has the highest number of stars
+* Pull the imagemagick image from: https://hub.docker.com/r/acleancoder/imagemagick-full
 
 * Check the version of the convert command.
 

@@ -8,7 +8,7 @@ About the course
    :toctree: generated
 
 
-This slow-paced hands-on course is designed for absolute beginners who want to start using scientific containers to achieve reproducibility of the data analysis.
+This slow-paced hands-on course is designed for absolute beginners who want to start using scientific containers to achieve reproducibility of data analysis.
 
 * `Course page <https://github.com/biocorecrg/CRG_Containers_June_2022>`_
 
