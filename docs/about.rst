@@ -75,10 +75,10 @@ Dates, time, location
 
 * Dates: Wednesday June 29, 2022
 
-* 9:30 - 17:30 **CET**
+* 9:30 - 17:00 **CET**
 
 
-* Location: Training room
+* Location: Training room, CRG
 
 .. _home-page-program:
 
@@ -86,17 +86,12 @@ Dates, time, location
 Suggested program
 ============
 
-
-.. _home-page-day1:
-
-Day 1: Introduction to Linux containers and Docker (May 30)
--------------
-
 * 09:30-11:00 Introduction to containers and Docker
-* 11:00-11:30 Break
-* 11:30-13:30 Docker
-* 09:30-11:00 More advanced Docker
-* 11:00-11:30 Coffee break
-* 11:30-13:30 Singularity
+* 11:00-11:15 Coffee Break
+* 11:15-13:00 Docker
+* 13:00-14:00 Lunch break
+* 14:00-15:30 More advanced Docker
+* 15:30-15:45 Coffee break
+* 15:45-17:00 Singularity
 
 
