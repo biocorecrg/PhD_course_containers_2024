@@ -10,9 +10,6 @@ Linux containers
 What are containers?
 ---------------------
 
-.. image:: https://www.synopsys.com/blogs/software-security/wp-content/uploads/2022.04/containers-rsa.jpg
-  :width: 700
-
 A Container can be seen as a **minimal virtual environment** that can be used in any Linux-compatible machine (and beyond).
 
 Using containers is time- and resource-saving as they allow:
@@ -34,7 +31,7 @@ Do not confuse with hardware emulator                  Application and dependenc
 Enable virtual machines                                Every virtual machine with an OS (Operating System)
 =====================================================  =====================================================
 
-Virtual machines vs containers
+Containers vs Virtual Machines
 ----------------------------------------
 
 .. image:: https://raw.githubusercontent.com/collabnix/dockerlabs/master/beginners/docker/images/vm-docker5.png
