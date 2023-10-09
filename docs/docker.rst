@@ -22,8 +22,10 @@ As a software:
 * `Docker Community Edition <https://www.docker.com/products/container-runtime>`__.
 * Docker Enterprise Edition.
 
-There is an increasing number of alternative container technologies and providers. Many of them are actually based on software components originally from the Docker stack and they normally try to address some specific use cases or weakpoints. As a example, **Singularity**, that we introduce later in this couse, is focused in HPC environments. Another case, **Podman**, keeps a high functional compatibility with Docker but with a different focus on technology (not keeping a daemon) and permissions.
+There is an increasing number of alternative container technologies and providers. Many of them are actually based on software components originally from the Docker stack, and they normally try to address some specific use cases or weak points. As an example, **Singularity**, that we introduce later in this course, is focused on HPC environments. 
 
+Another case, **Podman**, keeps a high functional compatibility with Docker but with a different focus on technology (not keeping a daemon) and permissions. **We will actually use Podman in this course**.
+``docker`` command will be an alias of ``podman`` in our environment.
 
 Docker components
 --------------------
@@ -50,6 +52,19 @@ When you start an image, you have a running container of this image. You can hav
 *"The image is the recipe, the container is the cake; you can make as many cakes as you like with a given recipe."*
 
 https://stackoverflow.com/questions/23735149/what-is-the-difference-between-a-docker-image-and-a-container
+
+Podman setup
+--------------
+
+Place the following bit of code in ``~/.config/containers/storage.conf``:
+
+.. code-block:: console
+
+  [storage]
+    driver = "overlay"
+    graphroot = "/tmp/$USER/.local/share/containers/storage"
+    [storage.options]
+      mount_program = "/usr/bin/fuse-overlayfs"
 
 
 Docker vocabulary

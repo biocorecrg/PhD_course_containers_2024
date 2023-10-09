@@ -239,7 +239,7 @@ Troubleshooting
 Fakeroot
 ********
 
-Singularity permissions are an evolving field. If you don't have access to ``sudo``, it might be worth considering using **--fakeroot/-f** parameter.
+Singularity permissions are an evolving field. If you don't have access to ``sudo``, it might be worth considering using **\--fakeroot/-f** parameter.
 
 * More details at `https://apptainer.org/docs/user/main/fakeroot.html <https://apptainer.org/docs/user/main/fakeroot.html>`__
 

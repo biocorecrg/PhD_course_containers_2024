@@ -33,7 +33,7 @@ Update and upgrade packages
   apt-get update && apt-get upgrade -y
 
 
-In **CentOS**:
+* In **CentOS**:
 
 .. code-block::
 
@@ -85,6 +85,7 @@ Each row in the recipe corresponds to a **layer** of the final image.
 Think about it this way: every **RUN** line is essentially what you would run to install programs on a freshly installed Ubuntu OS.
 
 .. code-block::
+
   RUN apt install wget
 
 
@@ -129,7 +130,8 @@ Syntax: **-t** *imagename:tag*. If not defined ```:tag``` default is latest.
   docker build -t mytestimage:latest .
 
 
-* IMPORTANT: Avoid contexts (directories) over-populated with files (even if not actually used in the recipe).
+**IMPORTANT: Avoid contexts (directories) over-populated with files (even if not actually used in the recipe).**
+
 In order to avoid that some directories or files are inspected or included (e.g, with COPY command in Dockerfile), you can use .dockerignore file to specify which paths should be avoided. More information at: https://codefresh.io/docker-tutorial/not-ignore-dockerignore-2/
 
 
