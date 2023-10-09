@@ -1,11 +1,11 @@
 .. _home-page:
 
 *******************
-Scientific Containers: Docker and Singularity - June 2022
+Scientific Containers CRG PhD course 2023
 *******************
 
 
-`GitHub repository <https://github.com/biocorecrg/CRG_Containers_June_2022>`_
+`GitHub repository <https://github.com/biocorecrg/PhD_course_containers_2023>`_
 
 Contents:
 

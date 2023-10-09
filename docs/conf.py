@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Courses@CRG: Reproducible research and data analysis using Containers & Nextflow 2022'
+project = 'Scientific Containers CRG PhD Course 2023'
 
 # -- General configuration ---------------------------------------------------
 
