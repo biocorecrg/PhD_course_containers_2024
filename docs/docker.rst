@@ -109,7 +109,7 @@ docker pull: import image
 
 .. code-block:: console
 
-  docker pull ubuntu:18.04
+  docker pull ubuntu:22.04
 
 
 Biocontainers
@@ -159,7 +159,7 @@ docker run image:tag **command**
 
 .. code-block:: console
 
-  docker run ubuntu:18.04 /bin/ls
+  docker run ubuntu:22.04 /bin/ls
 
 
 .. image:: images/docker_run_ls.png
@@ -172,28 +172,28 @@ You can execute any program/command that is stored inside the image:
 
 .. code-block:: console
 
-  docker run ubuntu:18.04 /bin/whoami
-  docker run ubuntu:18.04 cat /etc/issue
+  docker run ubuntu:22.04 /bin/whoami
+  docker run ubuntu:22.04 cat /etc/issue
 
 
 You can either execute programs in the image from the command line (see above) or **execute a container interactively**, i.e. **"enter"** the container.
 
 .. code-block:: console
 
-  docker run -it ubuntu:18.04 /bin/bash
+  docker run -it ubuntu:22.04 /bin/bash
 
 
 Run container as daemon (in background)
 
 .. code-block:: console
 
-  docker run --detach ubuntu:18.04 tail -f /dev/null
+  docker run --detach ubuntu:22.04 tail -f /dev/null
 
 Run container as daemon (in background) with a given name
 
 .. code-block:: console
 
-  docker run --detach --name myubuntu ubuntu:18.04 tail -f /dev/null
+  docker run --detach --name myubuntu ubuntu:22.04 tail -f /dev/null
 
 
 docker ps: check containers status
@@ -229,52 +229,6 @@ docker exec: execute process in running container
 
   docker exec -it myubuntu /bin/bash
 
-
-docker stop, start, restart: actions on container
--------------------------------------------------
-
-Stop a running container:
-
-.. code-block:: console
-
-  docker stop myubuntu
-
-  docker ps -a
-
-
-Start a stopped container (does NOT create a new one):
-
-.. code-block:: console
-
-  docker start myubuntu
-
-  docker ps -a
-
-
-Restart a running container:
-
-.. code-block:: console
-
-  docker restart myubuntu
-
-  docker ps -a
-
-
-Run with restart enabled
-
-.. code-block:: console
-
-  docker run --restart=unless-stopped --detach --name myubuntu2 ubuntu:18.04 tail -f /dev/null
-
-* Restart policies: no (default), always, on-failure, unless-stopped
-
-Update restart policy
-
-.. code-block:: console
-
-  docker update --restart unless-stopped myubuntu
-
-
 docker rm, docker rmi: clean up!
 --------------------------------
 
@@ -286,7 +240,7 @@ docker rm, docker rmi: clean up!
 
 .. code-block:: console
 
-  docker rmi ubuntu:18.04
+  docker rmi ubuntu:22.04
 
 
 Major clean
@@ -324,9 +278,9 @@ Syntax: **--volume/-v** *host:container*
 
 .. code-block:: console
 
-  mkdir datatest
-  touch datatest/test
-  docker run --detach --volume $(pwd)/datatest:/scratch --name fastqc_container biocontainers/fastqc:v0.11.9_cv7 tail -f /dev/null
+  mkdir test
+  touch test/test
+  docker run --detach --volume $(pwd)/test:/scratch --name fastqc_container biocontainers/fastqc:v0.11.9_cv7 tail -f /dev/null
   docker exec -ti fastqc_container /bin/bash
   > ls -l /scratch
   > exit
@@ -350,4 +304,4 @@ A convenient command would be:
 
 .. code-block:: console
 
-  docker run --user $(id -u):$(id -g) --detach --volume $(pwd)/datatest:/scratch --name user_test biocontainers/fastqc:v0.11.9_cv7 touch /scratch/userfile
+  docker run --user $(id -u):$(id -g) --detach --volume $(pwd)/test:/scratch --name user_test biocontainers/fastqc:v0.11.9_cv7 touch /scratch/userfile
