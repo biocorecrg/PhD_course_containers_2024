@@ -12,7 +12,6 @@ Contents:
 .. toctree::
    :maxdepth: 1
 
-   about
    containers
    docker
    docker_2
