@@ -274,7 +274,7 @@ Volumes
 
 Docker containers are fully isolated. It is necessary to mount volumes in order to handle input/output files.
 
-Syntax: **--volume/-v** *host:container*
+Syntax: **\--volume/-v** *host:container*
 
 .. code-block:: console
 
