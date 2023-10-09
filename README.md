@@ -37,7 +37,7 @@ https://wiki.gentoo.org/wiki/Nano/Basics_Guide
 
 * Dates: 16th November 2023. Time: 12:00 - 17:00h (CET)
 
-* Location: Training room, CRG
+* Location: Online
 ## Program
 
 * 12:00-13:00 Introduction to containers and Docker
