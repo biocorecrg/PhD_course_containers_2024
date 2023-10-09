@@ -135,15 +135,6 @@ Test a processing of a file from *testdata* directory:
     singularity exec fastqc-0.11.9_cv7.sif fastqc B7_input_s_chr19.fastq.gz
 
 
-Singularity run
-***************
-
-This executes runscript from recipe definition (equivalent to ``docker run``). Not so common for HPC uses. More common for instances (servers).
-
-.. code-block:: console
-
-    singularity run fastqc-0.11.9.sif
-
 
 Environment control
 *******************
@@ -154,7 +145,6 @@ By default Singularity inherits a profile environment (e.g., PATH environment va
 
     singularity shell -e fastqc-0.11.9.sif
     singularity exec -e fastqc-0.11.9.sif fastqc
-    singularity run -e fastqc-0.11.9.sif
 
 
 Compare ``env`` command with and without -e modifier.
@@ -171,29 +161,6 @@ Exercise
 	* Consider and compare different registry sources
 * Explore the inside contents of the image
 * Execute in different ways ``samtools`` program (e. g., using *fqidx* option)
-
-Singularity recipes
-===================
-
-Docker bootstrap
-----------------
-
-.. code-block::
-
-  BootStrap: docker
-  From: biocontainers/fastqc:v0.11.9_cv7
-
-  %runscript
-      echo "Welcome to FastQC Image"
-      fastqc --version
-
-  %post
-      echo "Image built"
-
-
-.. code-block:: console
-
-    sudo singularity build fastqc.sif docker.singularity
 
 
 Singularity advanced aspects
@@ -289,7 +256,7 @@ Singularity cache directory
 Global singularity configuration
 ********************************
 
-Normally at ``/etc/singularity/singularity.conf`` or similar (e.g preceded by ``/usr/local/``)
+Normally at ``/etc/singularity/singularity.conf`` or similar (e.g., preceded by ``/usr/local/``)
 
 * It can only be modified by users with administration permissions
 * Worth noting ``bind path`` lines, which point default mounted directories in containers
