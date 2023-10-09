@@ -8,7 +8,7 @@ Reproducible research using Containers
 
 ## About the course
 
-This slow-paced hands-on course is designed for absolute beginners who want to start using Linux Containers ([Docker/Podman](https://podmain.io/) and [Singularity/Apptainer](https://www.apptainer.org/)).
+This slow-paced hands-on course is designed for absolute beginners who want to start using Linux Containers ([Docker/Podman](https://podman.io/) and [Singularity/Apptainer](https://www.apptainer.org/)).
 
 ### Outline
 
