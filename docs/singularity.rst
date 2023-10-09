@@ -128,7 +128,7 @@ That is the most common way to execute Singularity (equivalent to ``docker exec`
 
     singularity exec fastqc-0.11.9.sif fastqc
 
-Test a processing of a file from *testdata* directory:
+Test a processing of a file from Git *data* directory:
 
 .. code-block:: console
 
@@ -178,9 +178,9 @@ For others, need to be done explicitly (syntax: host:container)
 
 .. code-block:: console
 
-    mkdir datatest
-    touch datatest/testout
-    singularity shell -e -B ./datatest:/scratch fastqc-0.11.9.sif
+    mkdir test
+    touch test/testout
+    singularity shell -e -B ./test:/scratch fastqc-0.11.9.sif
     > touch /scratch/testin
     > exit
     ls -l testdir
@@ -200,26 +200,26 @@ Using the 2 fastq available files, process them outside and inside a mounted dir
 .. code-block:: console
 
 	# Let's create a dummy directory
-	mkdir datatest
+	mkdir test
 
-	# Let's copy contents of testdata in that directory
+	# Let's copy contents of data directory in that directory
 
-	singularity exec fastqc.sif fastqc datatest/*fastq.gz
+	singularity exec fastqc.sif fastqc test/*fastq.gz
 
 	# Check you have some HTMLs there. Remove them
-	rm datatest/*html
+	rm test/*html
 
 	# Let's use shell
 	singularity shell fastqc.sif
-	> cd datatest
+	> cd test
 	> fastqc *fastq.gz
 	> exit
 
 	# Check you have some HTMLs there. Remove them
-	singularity exec -B ./datatest:/scratch fastqc.sif fastqc /scratch/*fastq.gz
+	singularity exec -B ./test:/scratch fastqc.sif fastqc /scratch/*fastq.gz
 
 	# What happens here!
-	singularity exec -B ./datatest:/scratch fastqc.sif bash -c 'fastqc /scratch/*fastq.gz'
+	singularity exec -B ./test:/scratch fastqc.sif bash -c 'fastqc /scratch/*fastq.gz'
 
 .. raw:: html
 
