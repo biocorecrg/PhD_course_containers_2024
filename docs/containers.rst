@@ -31,10 +31,7 @@ Do not confuse with hardware emulator                  Application and dependenc
 Enable virtual machines                                Every virtual machine with an OS (Operating System)
 =====================================================  =====================================================
 
-Containers vs Virtual Machines
-----------------------------------------
-
-.. image:: https://raw.githubusercontent.com/collabnix/dockerlabs/master/beginners/docker/images/vm-docker5.png
+.. image:: images/vms-containers.png
   :width: 800
 
 `Source <https://dockerlabs.collabnix.com/beginners/difference-docker-vm.html>`__
