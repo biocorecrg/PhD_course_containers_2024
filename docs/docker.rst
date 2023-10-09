@@ -7,9 +7,6 @@ Docker
 Introduction to Docker
 ========================
 
-.. image:: https://connpass-tokyo.s3.amazonaws.com/thumbs/80/52/80521f18aec0945dfedbb471dad6aa1a.png
-  :width: 400
-
 
 What is Docker?
 -------------------
