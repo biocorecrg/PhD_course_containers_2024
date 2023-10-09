@@ -8,13 +8,13 @@ Reproducible research using Containers
 
 ## About the course
 
-This slow-paced hands-on course is designed for absolute beginners who want to start using Linux Containers ([Docker](https://www.docker.com/) and [Singularity/Apptainer](https://www.apptainer.org/)).
+This slow-paced hands-on course is designed for absolute beginners who want to start using Linux Containers ([Docker/Podman](https://podmain.io/) and [Singularity/Apptainer](https://www.apptainer.org/)).
 
 ### Outline
 
 The course will train participants to run and build Linux containers.
 
-It is designed to provide trainees with short and frequent hands-on sessions, while keeping theoretical sessions to a minimum.
+It is designed to provide trainees with short and frequent hands-on sessions while keeping theoretical sessions to a minimum.
 
 
 ### Learning objectives
@@ -26,11 +26,11 @@ It is designed to provide trainees with short and frequent hands-on sessions, wh
 ### Prerequisite / technical requirements
 
 Being comfortable working with the CLI (command-line interface) in a Linux-based environment.
-Knowledge of containers is not mandatory. The course materials is online in the dedicated GitHub page for self-learning.
+The course materials are online on the dedicated GitHub page for self-learning.
 
-Practitioners will need to connect during the course to a remote server via the "ssh" protocol. You can learn about it [here](https://www.hostinger.com/tutorials/ssh-tutorial-how-does-ssh-work)
+Practitioners must connect to a remote server via the "ssh" protocol during the course. You can learn about it [here](https://www.hostinger.com/tutorials/ssh-tutorial-how-does-ssh-work)
 
-Those who follow the course should be able to use a command-line/screen-oriented text editor (such as nano or vi/vim, which are already available on the server) or to be able to use an editor able to connect remotely. For sake of information, below the basics of "nano":
+Those who follow the course should be able to use a command-line/screen-oriented text editor (such as nano or vi/vim, which are already available on the server) or to be able to use an editor able to connect remotely. For the sake of information, below are the basics of "nano":
 https://wiki.gentoo.org/wiki/Nano/Basics_Guide
 
 ## Dates, time, location
@@ -40,9 +40,9 @@ https://wiki.gentoo.org/wiki/Nano/Basics_Guide
 * Location: Online
 ## Program
 
-* 12:00-13:00 Introduction to containers and Docker
+* 12:00-13:00 Introduction to containers and Docker/Podman
 * 13:00-14:00 Lunch Break
-* 14:00-16:00 Docker
+* 14:00-16:00 Docker/Podman
 * 16:00-17:00 Singularity/Apptainer
 
 ## Acknowledgements
