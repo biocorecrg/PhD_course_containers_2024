@@ -28,7 +28,7 @@ It is designed to provide trainees with short and frequent hands-on sessions whi
 Being comfortable working with the CLI (command-line interface) in a Linux-based environment.
 The course materials are online on the dedicated GitHub page for self-learning.
 
-Practitioners must connect to a remote server via the "ssh" protocol during the course. You can learn about it [here](https://www.hostinger.com/tutorials/ssh-tutorial-how-does-ssh-work)
+Practitioners must connect to a remote server via the "ssh" protocol during the course. You can learn about it [here](https://www.hostinger.com/tutorials/ssh-tutorial-how-does-ssh-work).
 
 Those who follow the course should be able to use a command-line/screen-oriented text editor (such as nano or vi/vim, which are already available on the server) or to be able to use an editor able to connect remotely. For the sake of information, below are the basics of "nano":
 https://wiki.gentoo.org/wiki/Nano/Basics_Guide
