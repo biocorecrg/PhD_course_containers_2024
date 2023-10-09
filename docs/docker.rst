@@ -109,8 +109,6 @@ docker pull: import image
 
 * choose the version of Ubuntu you are fetching: check the different tags
 
-.. image:: images/dockerhub_ubuntu_1804.png
-  :width: 850
 
 .. code-block:: console
 
@@ -320,55 +318,6 @@ Remove ALL non-running containers, images, etc. - **DO WITH MUCH MORE CARE!!!**
 * Reference: https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes
 
 
-Exercise
---------
-
-
-* - **Imagemagick**
-
-* Pull the imagemagick image from: https://hub.docker.com/r/acleancoder/imagemagick-full
-
-* Check the version of the convert command.
-
-* Start a container interactively.
-
-* Inside the container: download this png image (https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png)
-
-* Convert it to .jpg using the convert command of imagemagick (format; convert image.png image.jpg).
-
-* Exit the container.
-
-* Copy the jpg image back from the stopped container! Try new command `docker cp`.
-
-
-.. raw:: html
-
-   <details>
-   <summary><a>Suggested solution</a></summary>
-
-.. code-block:: console
-
-  # Pull image
-  docker pull acleancoder/imagemagick-full
-
-  # Check version of `convert`
-  docker run acleancoder/imagemagick-full convert --version
-
-  # Start interactive container
-  docker run -it acleancoder/imagemagick-full
-    # fetch png image
-    > wget  https://www.docker.com/wp-content/uploads/2022/03/vertical-logo-monochromatic.png
-    # convert to jpg
-    > convert vertical-logo-monochromatic.png myimage.jpg
-    # exit container
-
-  # fetch container ID with `ps -a` and use `docker cp` to copy jpg file from the stopped container to the host
-  docker cp *CONTAINER_ID*:/myimage.jpg .
-
-.. raw:: html
-
-    </details>
-
 Volumes
 =======
 
@@ -384,37 +333,6 @@ Syntax: **--volume/-v** *host:container*
   docker exec -ti fastqc_container /bin/bash
   > ls -l /scratch
   > exit
-
-
-Ports
-=====
-
-The same as with volumes, but with ports, to access Internet services.
-
-Syntax: **--publish/-p** *host:container*
-
-
-.. code-block:: console
-
-  docker run --detach --name webserver nginx
-  curl localhost:80
-  docker exec webserver curl localhost:80
-  docker rm -f webserver
-
-.. code-block:: console
-
-  docker run --detach --name webserver --publish 80:80 nginx
-  curl localhost:80
-  docker rm -f webserver
-
-.. code-block:: console
-
-  docker run --detach --name webserver -p 8080:80 nginx
-  curl localhost:80
-  curl localhost:8080
-  docker exec webserver curl localhost:80
-  docker exec webserver curl localhost:8080
-  docker rm -f webserver
 
 
 Volume exercises
