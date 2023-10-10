@@ -313,7 +313,7 @@ Volume exercises
 docker run --user
 -----------------
 
-It is possible to run certain containers with a specific user, appending ```run --user```.
+It is possible to run some containers with a specific user, appending ```run --user```.
 
 A convenient command would be:
 
