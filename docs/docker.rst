@@ -22,9 +22,9 @@ As a software:
 * `Docker Community Edition <https://www.docker.com/products/container-runtime>`__.
 * Docker Enterprise Edition.
 
-There is an increasing number of alternative container technologies and providers. Many of them are actually based on software components originally from the Docker stack, and they normally try to address some specific use cases or weak points. As an example, **Singularity**, that we introduce later in this course, is focused on HPC environments. 
+There is an increasing number of alternative container technologies and providers. Many of them are based on software components originally from the Docker stack, and they usually try to address some specific use cases or weak points. As an example, **Singularity**, which we introduce later in this course, is focused on HPC environments. 
 
-Another case, **Podman**, keeps a high functional compatibility with Docker but with a different focus on technology (not keeping a daemon) and permissions. **We will actually use Podman in this course**.
+Another case, **Podman** <https://podman.io>`__, keeps high functional compatibility with Docker but with a different focus on technology (not keeping a daemon) and permissions. **We will use Podman in this course**.
 ``docker`` command will be an alias of ``podman`` in our environment.
 
 Docker components
