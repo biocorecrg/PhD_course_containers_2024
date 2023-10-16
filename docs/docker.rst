@@ -301,23 +301,3 @@ Syntax: **\--volume/-v** *host:container*
   > ls -l /scratch
   > exit
 
-
-Volume exercises
-================
-
-1. Copy the 2 fastq files from available datasets in Github repository and place them in mounted directory
-
-2. Run fastqc interactively (inside container): ```fastqc  /scratch/*.gz```
-
-3. Run fastqc non-interactively (outside the container)
-
-docker run \--user
------------------
-
-It is possible to run some containers with a specific user, appending ```run --user```.
-
-A convenient command would be:
-
-.. code-block:: console
-
-  docker run --user $(id -u):$(id -g) --detach --volume $(pwd)/test:/scratch --name user_test biocontainers/fastqc:v0.11.9_cv7 touch /scratch/userfile
