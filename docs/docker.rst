@@ -65,6 +65,7 @@ Place the following bit of code in ``~/.config/containers/storage.conf``:
     graphroot = "/tmp/podman/$USER/.local/share/containers/storage"
     [storage.options]
       mount_program = "/usr/bin/fuse-overlayfs"
+      ignore_chown_errors = "true"
 
 
 Docker vocabulary
