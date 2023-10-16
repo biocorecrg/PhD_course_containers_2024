@@ -154,14 +154,6 @@ Compare ``env`` command with and without -e modifier.
     singularity exec fastqc-0.11.9.sif env
     singularity exec -e fastqc-0.11.9.sif env
 
-Exercise
---------
-
-* Generate a Singularity image of the last *samtools* version
-	* Consider and compare different registry sources
-* Explore the inside contents of the image
-* Execute in different ways ``samtools`` program (e. g., using *fqidx* option)
-
 
 Singularity advanced aspects
 ============================
