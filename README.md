@@ -2,8 +2,8 @@
 
 Reproducible research using Containers
 
-* [Course page](https://github.com/biocorecrg/PhD_course_containers_2023)
-* [Course materials](https://biocorecrg.github.io/PhD_course_containers_2023)
+* [Course page](https://github.com/biocorecrg/PhD_course_containers_2024)
+* [Course materials](https://biocorecrg.github.io/PhD_course_containers_2024)
 
 
 ## About the course
