@@ -1,11 +1,11 @@
 .. _home-page:
 
 *******************
-Scientific Containers CRG PhD course 2023
+Scientific Containers CRG PhD course 2024
 *******************
 
 
-`GitHub repository <https://github.com/biocorecrg/PhD_course_containers_2023>`_
+`GitHub repository <https://github.com/biocorecrg/PhD_course_containers_2024>`_
 
 Contents:
 
