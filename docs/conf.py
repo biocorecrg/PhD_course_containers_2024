@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'Scientific Containers CRG PhD Course 2023'
+project = 'Scientific Containers CRG PhD Course 2024'
 
 # -- General configuration ---------------------------------------------------
 
@@ -62,6 +62,6 @@ html_theme = 'sphinx_rtd_theme'
 
 # The URL which points to the root of the HTML documentation.
 # It is used to indicate the location of document like canonical_url
-html_baseurl = 'https://biocorecrg.github.io/CoursesCRG_Containers_Nextflow_May_2022/'
+html_baseurl = 'https://biocorecrg.github.io/PhD_course_containers_2024/'
 
 # html_logo = html_favicon = '_images/sphinx-notes.png'
