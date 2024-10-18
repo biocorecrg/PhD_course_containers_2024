@@ -4,7 +4,7 @@
 Docker 2
 *******************
 
-Docker recipes: build your own images
+Docker recipes: build your images
 =====================================
 
 OS commands in image building
@@ -12,7 +12,7 @@ OS commands in image building
 
 Depending on the underlying OS, there are different ways to build images.
 
-Know your base system and their packages. Popular ones:
+Know your base system and its packages. Popular ones:
 
 * `Debian <https://packages.debian.org>`__
 
@@ -77,7 +77,7 @@ Each row in the recipe corresponds to a **layer** of the final image.
 
 .. code-block::
 
-  FROM ubuntu:18.04
+  FROM ubuntu:24.04
 
 
 **RUN**: the command to execute inside the image filesystem.
@@ -93,7 +93,7 @@ A basic recipe:
 
 .. code-block::
 
-  FROM ubuntu:18.04
+  FROM ubuntu:24.04
 
   RUN apt update && apt -y upgrade
   RUN apt install -y wget
@@ -117,7 +117,7 @@ Same as:
 
 Syntax: **--file / -f**
 
-**.** stands for the context (in this case, current directory) of the build process. This makes sense if copying files from filesystem, for instance. **IMPORTANT**: Avoid contexts (directories) overpopulated with files (even if not actually used in the recipe).
+**.** stands for the context (in this case, the current directory) of the build process. This makes sense if copying files from the filesystem, for instance. **IMPORTANT**: Avoid contexts (directories) overpopulated with files (even if they are not actually used in the recipe).
 
 You can define a specific name for the image during the build process.
 
@@ -130,16 +130,16 @@ Syntax: **-t** *imagename:tag*. If not defined ```:tag``` default is latest.
   docker build -t mytestimage:latest .
 
 
-**IMPORTANT: Avoid contexts (directories) over-populated with files (even if not actually used in the recipe).**
+**IMPORTANT: Avoid contexts (directories) over-populated with files (even if not used in the recipe).**
 
-In order to avoid that some directories or files are inspected or included (e.g, with COPY command in Dockerfile), you can use .dockerignore file to specify which paths should be avoided. More information at: https://codefresh.io/docker-tutorial/not-ignore-dockerignore-2/
+To avoid some directories or files being inspected or included (e.g., with COPY command in Dockerfile), you can use the .dockerignore file to specify which paths should be avoided. More information at: https://codefresh.io/docker-tutorial/not-ignore-dockerignore-2/
 
 
-The last line of installation should be **Successfully built ...**: then you are good to go.
+The last installation line should be **Successfully built ...**: you are good to go.
 
-Check with ``docker images`` that you see the newly built image in the list...
+Check with ``docker images`` to see if the newly built image is on the list...
 
-Then let's check the ID of the image and run it!
+Then, let's check the ID of the image and run it!
 
 .. code-block:: console
 
@@ -164,7 +164,7 @@ Difference between ADD and COPY explained `here <https://stackoverflow.com/quest
 
 **COPY**: lets you copy a local file or directory from your host (the machine from which you are building the image)
 
-**ADD**: same, but ADD works also for URLs, and for .tar archives that will be automatically extracted upon being copied.
+**ADD**: The same, but ADD also works for URLs and .tar archives that will be automatically extracted upon being copied.
 
 If we have a file, let's say ```example.jpg```, we can copy it.
 
@@ -177,7 +177,7 @@ A more sophisticated case:
 
 .. code-block::
 
-  FROM ubuntu:18.04
+  FROM ubuntu:24.04
 
   RUN apt update && apt -y upgrade
   RUN apt install -y wget
@@ -194,7 +194,7 @@ A more sophisticated case:
 Difference between ARG and ENV explained `here <https://vsupalov.com/docker-arg-vs-env/>`__.
 
 * **ARG** values: available only while the image is built.
-* **ENV** values: available during the image build process but also for the future running containers.
+* **ENV** values: available during the image build process and for future running containers.
   * It can be checked in a resulting running container by running ``env``.
 
 **CMD, ENTRYPOINT**: command to execute when generated container starts
@@ -206,7 +206,7 @@ If it is run with the argument **hello moon** it will execute `echo "hello moon"
 
 .. code-block::
 
-  FROM ubuntu:18.04
+  FROM ubuntu:24.04
   ENTRYPOINT ["/bin/echo"]
   CMD ["hello world"]
 
@@ -215,7 +215,7 @@ A more complex recipe (save it in a text file named **Dockerfile**:
 
 .. code-block::
 
-  FROM ubuntu:18.04
+  FROM ubuntu:24.04
 
   MAINTAINER Toni Hermoso Pulido <toni.hermoso@crg.eu>
 
@@ -257,7 +257,7 @@ Build exercise
   seq 1 1000 | shuf | head -$1
 
 
-This script outputs random intergers from 1 to 1000: the number of integers selected is given as the first argument.
+This script outputs random integers from 1 to 1000; the number of integers selected is given as the first argument.
 
 * Write a recipe for an image:
 
