@@ -1,4 +1,4 @@
-# Scientific Containers CRG PhD Course 2023
+# Scientific Containers CRG PhD Course 2024
 
 Reproducible research using Containers
 
@@ -35,7 +35,7 @@ https://wiki.gentoo.org/wiki/Nano/Basics_Guide
 
 ## Dates, time, location
 
-* Dates: 16th November 2023. Time: 12:00 - 17:00h (CET)
+* Dates: 21th October 2024. Time: 12:00 - 17:00h (CET)
 
 * Location: Online
 ## Program
