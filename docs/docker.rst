@@ -297,4 +297,3 @@ Syntax: **\--volume/-v** *host:container*
   docker exec -ti fastqc_container /bin/bash
   > ls -l /scratch
   > exit
-
