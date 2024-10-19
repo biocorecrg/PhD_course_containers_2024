@@ -43,15 +43,14 @@ Enable virtual machines                                Every virtual machine wit
 ADV   Virtualisation                                        Containerisation
 ===== ===================================================== =====================================================
 PROS. * Very similar to an entire OS.     		     * No need for complete OS installation (less space).
-      * High OS diversity       			     * Better portability
+      * High OS diversity.       			     * Better portability.
       							     * Faster than virtual machines.
 							     * Easier automation.
 							     * Easier distribution of recipes.
-							     * Better portability.
 
 
 CONS. * Need more space and resources.                       * Some cases might be different from an entire OS.
-      * Slower than containers.                              * Still less OS diversity, even with current solutions
+      * Slower than containers.                              * Still less OS diversity, even with current solutions.
       * Not that good automation.
 ===== ===================================================== =====================================================
 
