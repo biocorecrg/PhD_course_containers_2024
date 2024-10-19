@@ -17,9 +17,9 @@ Using containers is time- and resource-saving as they allow:
 * Controlling for software installation and dependencies.
 * Reproducibility of the analysis.
 
-Containers allow us to use **exactly the same versions of the tools**.
+Containers allow us to use **precisely the identical versions of the tools**.
 
-Virtual machines or containers ?
+Virtual machines or containers?
 ----------------------------------
 
 =====================================================  =====================================================
@@ -42,7 +42,7 @@ Enable virtual machines                                Every virtual machine wit
 ===== ===================================================== =====================================================
 ADV   Virtualisation                                        Containerisation
 ===== ===================================================== =====================================================
-PROS. * Very similar to a full OS.     			     * No need of full OS installation (less space).
+PROS. * Very similar to an entire OS.     		     * No need for complete OS installation (less space).
       * High OS diversity       			     * Better portability
       							     * Faster than virtual machines.
 							     * Easier automation.
@@ -50,7 +50,7 @@ PROS. * Very similar to a full OS.     			     * No need of full OS installation
 							     * Better portability.
 
 
-CONS. * Need more space and resources.                       * Some cases might not be exactly the same as a full OS.
+CONS. * Need more space and resources.                       * Some cases might be different from an entire OS.
       * Slower than containers.                              * Still less OS diversity, even with current solutions
       * Not that good automation.
 ===== ===================================================== =====================================================
