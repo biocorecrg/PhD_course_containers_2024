@@ -49,20 +49,6 @@ When you start an image, you have a running container of this image. You can hav
 
 https://stackoverflow.com/questions/23735149/what-is-the-difference-between-a-docker-image-and-a-container
 
-Podman setup
---------------
-
-Place the following bit of code in ``~/.config/containers/storage.conf``:
-
-.. code-block:: console
-
-  [storage]
-    driver = "overlay"
-    graphroot = "/tmp/podman/$USER/.local/share/containers/storage"
-    [storage.options]
-      mount_program = "/usr/bin/fuse-overlayfs"
-      ignore_chown_errors = "true"
-
 
 Docker vocabulary
 ----------------------------
