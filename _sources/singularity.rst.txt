@@ -24,9 +24,9 @@ Singularity architecture
 ===================================================== =====================================================
 Strengths                                             Weaknesses
 ===================================================== =====================================================
-No dependency of a daemon                             At the time of writing only good support in Linux
-Can be run as a simple user                           Mac experimental. Desktop edition. Only running
-Avoids permission headaches and hacks                 For some features you need root account (or sudo)
+No dependency on a daemon                             At the time of writing, only good support in Linux
+It can be run as a simple user                        Mac experimental. Desktop edition. Only running
+It avoids permission headaches and hacks              For some features, you need a root account (or sudo)
 Image/container is a file (or directory)
 More easily portable
 
@@ -42,21 +42,21 @@ Nowadays, there may be some confusion since there are two projects:
 * `Apptainer Singularity <https://github.com/apptainer/singularity>`__
 * `Sylabs Singularity <https://sylabs.io/singularity/>`__
 
-They "forked" in 2021. So far they share most of the codebase, but eventually this could be different, and software might have different functionality.
+They "forked" in 2021. So far, they share most of the codebase, but eventually, this could be different, and the software might have different functionality.
 
-The former is already "End Of Life" and its development continues named as `Apptainer <http://apptainer.org/>`_, under the support of the Linux Foundation.
+The former is already "End Of Life," but its development continues under the name `Apptainer` http://apptainer.org/>`_, with the support of the Linux Foundation.
 
 Container registries
 ====================
 
-Container images, normally different versions of them, are stored in container repositories.
+Container images, typically different versions, are stored in container repositories.
 
-These repositories can be browser or discovered within, normally public, container registries.
+These repositories can be browsed or discovered within normally public container registries.
 
 Docker Hub
 ----------
 
-It is the first and most popular public container registry (which provides also private repositories).
+It is the first and most popular public container registry (which also provides private repositories).
 
 * `Docker Hub <https://hub.docker.com>`__
 
@@ -74,9 +74,9 @@ Biocontainers
 
 * `Biocontainers <https://biocontainers.pro>`__
 
-Website gathering Bioinformatics focused container images from different registries.
+Website gathering bioinformatics-focused container images from different registries.
 
-Originally Docker Hub was used, but now other registries are preferred.
+Originally, Docker Hub was used, but now other registries are preferred.
 
 Example: `https://biocontainers.pro/tools/fastqc <https://biocontainers.pro/tools/fastqc>`__
 
@@ -98,31 +98,31 @@ Via Galaxy project prebuilt images
 	singularity pull --name fastqc-0.11.9.sif https://depot.galaxyproject.org/singularity/fastqc:0.11.9--0
 
 
-Galaxy project provides all Bioinformatics software from the BioContainers initiative as Singularity prebuilt images. If download and conversion time of images is an issue, this might be the best option for those working in the biomedical field.
+The Galaxy project provides all Bioinformatics software from the BioContainers initiative as Singularity prebuilt images. If image download and conversion time is an issue, this might be the best option for those working in the biomedical field.
 
 Link: https://depot.galaxyproject.org/singularity/
 
 Running and executing containers
 --------------------------------
 
-Once we have some image files (or directories) ready, we can run processes.
+We can run processes once we have some image files (or directories) ready.
 
 Singularity shell
 *****************
 
-The straight-forward exploratory approach is equivalent to ``docker run -ti biocontainers/fastqc:v0.11.9_cv7 /bin/shell`` but with a more handy syntax.
+The straightforward exploratory approach is equivalent to ``docker run -ti biocontainers/fastqc:v0.11.9_cv7 /bin/shell`` but with a more handy syntax.
 
 .. code-block:: console
 
 	singularity shell fastqc-0.11.9.sif
 
 
-Move around the directories and notice how the isolation approach is different in comparison to Docker. You can access most of the host filesystem.
+Move around the directories and notice how the isolation approach differs from Docker. You can access most of the host filesystem.
 
 Singularity exec
 ****************
 
-That is the most common way to execute Singularity (equivalent to ``docker exec``). That would be the normal approach in a HPC environment.
+This is the most common way to execute Singularity (equivalent to ``docker exec``), and it would be the normal approach in an HPC environment.
 
 .. code-block:: console
 
@@ -139,7 +139,7 @@ Test a processing of a file from Git *data* directory:
 Environment control
 *******************
 
-By default Singularity inherits a profile environment (e.g., PATH environment variable). This may be convenient in some circumstances, but it can also lead to unexpected problems when your own environment clashes with the default one from the image.
+By default, Singularity inherits a profile environment (e.g., PATH environment variable). This may be convenient in some circumstances, but it can also lead to unexpected problems when your environment clashes with the default one from the image.
 
 .. code-block:: console
 
@@ -162,7 +162,7 @@ Singularity advanced aspects
 Bind paths (aka volumes)
 ------------------------
 
-Paths of host system mounted in the container
+Paths of the host system mounted in the container.
 
 * Default ones, no need to mount them explicitly (for 3.6.x): ```$HOME``` , ```/sys:/sys``` , ```/proc:/proc```, ```/tmp:/tmp```, ```/var/tmp:/var/tmp```, ```/etc/resolv.conf:/etc/resolv.conf```, ```/etc/passwd:/etc/passwd```, and ```$PWD```  `Ref <https://apptainer.org/docs/user/main/bind_paths_and_mounts.html>`__
 
@@ -194,7 +194,7 @@ Using the 2 fastq available files, process them outside and inside a mounted dir
 	# Let's create a dummy directory
 	mkdir test
 
-	# Let's copy contents of data directory in that directory
+	# Let's copy the contents of the data directory in that directory
 
 	singularity exec fastqc.sif fastqc test/*fastq.gz
 

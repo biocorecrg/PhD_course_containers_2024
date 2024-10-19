@@ -134,14 +134,14 @@
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>No dependency of a daemon</p></td>
-<td><p>At the time of writing only good support in Linux</p></td>
+<tr class="row-even"><td><p>No dependency on a daemon</p></td>
+<td><p>At the time of writing, only good support in Linux</p></td>
 </tr>
-<tr class="row-odd"><td><p>Can be run as a simple user</p></td>
+<tr class="row-odd"><td><p>It can be run as a simple user</p></td>
 <td><p>Mac experimental. Desktop edition. Only running</p></td>
 </tr>
-<tr class="row-even"><td><p>Avoids permission headaches and hacks</p></td>
-<td><p>For some features you need root account (or sudo)</p></td>
+<tr class="row-even"><td><p>It avoids permission headaches and hacks</p></td>
+<td><p>For some features, you need a root account (or sudo)</p></td>
 </tr>
 <tr class="row-odd"><td><p>Image/container is a file (or directory)</p></td>
 <td></td>
@@ -163,17 +163,17 @@
 <li><p><a class="reference external" href="https://github.com/apptainer/singularity">Apptainer Singularity</a></p></li>
 <li><p><a class="reference external" href="https://sylabs.io/singularity/">Sylabs Singularity</a></p></li>
 </ul>
-<p>They “forked” in 2021. So far they share most of the codebase, but eventually this could be different, and software might have different functionality.</p>
-<p>The former is already “End Of Life” and its development continues named as <a class="reference external" href="http://apptainer.org/">Apptainer</a>, under the support of the Linux Foundation.</p>
+<p>They “forked” in 2021. So far, they share most of the codebase, but eventually, this could be different, and the software might have different functionality.</p>
+<p>The former is already “End Of Life,” but its development continues under the name <cite>Apptainer</cite> <a class="reference external" href="http://apptainer.org/">http://apptainer.org/</a>&gt;`_, with the support of the Linux Foundation.</p>
 </section>
 </section>
 <section id="container-registries">
 <h2>Container registries<a class="headerlink" href="#container-registries" title="Link to this heading"></a></h2>
-<p>Container images, normally different versions of them, are stored in container repositories.</p>
-<p>These repositories can be browser or discovered within, normally public, container registries.</p>
+<p>Container images, typically different versions, are stored in container repositories.</p>
+<p>These repositories can be browsed or discovered within normally public container registries.</p>
 <section id="docker-hub">
 <h3>Docker Hub<a class="headerlink" href="#docker-hub" title="Link to this heading"></a></h3>
-<p>It is the first and most popular public container registry (which provides also private repositories).</p>
+<p>It is the first and most popular public container registry (which also provides private repositories).</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://hub.docker.com">Docker Hub</a></p></li>
 </ul>
@@ -188,8 +188,8 @@
 <ul class="simple">
 <li><p><a class="reference external" href="https://biocontainers.pro">Biocontainers</a></p></li>
 </ul>
-<p>Website gathering Bioinformatics focused container images from different registries.</p>
-<p>Originally Docker Hub was used, but now other registries are preferred.</p>
+<p>Website gathering bioinformatics-focused container images from different registries.</p>
+<p>Originally, Docker Hub was used, but now other registries are preferred.</p>
 <p>Example: <a class="reference external" href="https://biocontainers.pro/tools/fastqc">https://biocontainers.pro/tools/fastqc</a></p>
 <section id="via-quay-io">
 <h4>Via quay.io<a class="headerlink" href="#via-quay-io" title="Link to this heading"></a></h4>
@@ -203,24 +203,24 @@
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">singularity pull --name fastqc-0.11.9.sif https://depot.galaxyproject.org/singularity/fastqc:0.11.9--0</span>
 </pre></div>
 </div>
-<p>Galaxy project provides all Bioinformatics software from the BioContainers initiative as Singularity prebuilt images. If download and conversion time of images is an issue, this might be the best option for those working in the biomedical field.</p>
+<p>The Galaxy project provides all Bioinformatics software from the BioContainers initiative as Singularity prebuilt images. If image download and conversion time is an issue, this might be the best option for those working in the biomedical field.</p>
 <p>Link: <a class="reference external" href="https://depot.galaxyproject.org/singularity/">https://depot.galaxyproject.org/singularity/</a></p>
 </section>
 </section>
 <section id="running-and-executing-containers">
 <h3>Running and executing containers<a class="headerlink" href="#running-and-executing-containers" title="Link to this heading"></a></h3>
-<p>Once we have some image files (or directories) ready, we can run processes.</p>
+<p>We can run processes once we have some image files (or directories) ready.</p>
 <section id="singularity-shell">
 <h4>Singularity shell<a class="headerlink" href="#singularity-shell" title="Link to this heading"></a></h4>
-<p>The straight-forward exploratory approach is equivalent to <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-ti</span> <span class="pre">biocontainers/fastqc:v0.11.9_cv7</span> <span class="pre">/bin/shell</span></code> but with a more handy syntax.</p>
+<p>The straightforward exploratory approach is equivalent to <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span> <span class="pre">-ti</span> <span class="pre">biocontainers/fastqc:v0.11.9_cv7</span> <span class="pre">/bin/shell</span></code> but with a more handy syntax.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">singularity shell fastqc-0.11.9.sif</span>
 </pre></div>
 </div>
-<p>Move around the directories and notice how the isolation approach is different in comparison to Docker. You can access most of the host filesystem.</p>
+<p>Move around the directories and notice how the isolation approach differs from Docker. You can access most of the host filesystem.</p>
 </section>
 <section id="singularity-exec">
 <h4>Singularity exec<a class="headerlink" href="#singularity-exec" title="Link to this heading"></a></h4>
-<p>That is the most common way to execute Singularity (equivalent to <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">exec</span></code>). That would be the normal approach in a HPC environment.</p>
+<p>This is the most common way to execute Singularity (equivalent to <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">exec</span></code>), and it would be the normal approach in an HPC environment.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">singularity exec fastqc-0.11.9.sif fastqc</span>
 </pre></div>
 </div>
@@ -231,7 +231,7 @@
 </section>
 <section id="environment-control">
 <h4>Environment control<a class="headerlink" href="#environment-control" title="Link to this heading"></a></h4>
-<p>By default Singularity inherits a profile environment (e.g., PATH environment variable). This may be convenient in some circumstances, but it can also lead to unexpected problems when your own environment clashes with the default one from the image.</p>
+<p>By default, Singularity inherits a profile environment (e.g., PATH environment variable). This may be convenient in some circumstances, but it can also lead to unexpected problems when your environment clashes with the default one from the image.</p>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">singularity shell -e fastqc-0.11.9.sif</span>
 <span class="go">singularity exec -e fastqc-0.11.9.sif fastqc</span>
 </pre></div>
@@ -248,7 +248,7 @@
 <h2>Singularity advanced aspects<a class="headerlink" href="#singularity-advanced-aspects" title="Link to this heading"></a></h2>
 <section id="bind-paths-aka-volumes">
 <h3>Bind paths (aka volumes)<a class="headerlink" href="#bind-paths-aka-volumes" title="Link to this heading"></a></h3>
-<p>Paths of host system mounted in the container</p>
+<p>Paths of the host system mounted in the container.</p>
 <ul class="simple">
 <li><p>Default ones, no need to mount them explicitly (for 3.6.x): <code class="docutils literal notranslate"><span class="pre">`$HOME`</span></code> , <code class="docutils literal notranslate"><span class="pre">`/sys:/sys`</span></code> , <code class="docutils literal notranslate"><span class="pre">`/proc:/proc`</span></code>, <code class="docutils literal notranslate"><span class="pre">`/tmp:/tmp`</span></code>, <code class="docutils literal notranslate"><span class="pre">`/var/tmp:/var/tmp`</span></code>, <code class="docutils literal notranslate"><span class="pre">`/etc/resolv.conf:/etc/resolv.conf`</span></code>, <code class="docutils literal notranslate"><span class="pre">`/etc/passwd:/etc/passwd`</span></code>, and <code class="docutils literal notranslate"><span class="pre">`$PWD`</span></code>  <a class="reference external" href="https://apptainer.org/docs/user/main/bind_paths_and_mounts.html">Ref</a></p></li>
 </ul>
@@ -268,7 +268,7 @@
 <summary><a>Suggested solution</a></summary><div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp"># </span>Let<span class="err">&#39;</span>s<span class="w"> </span>create<span class="w"> </span>a<span class="w"> </span>dummy<span class="w"> </span>directory
 <span class="go">mkdir test</span>
 
-<span class="gp"># </span>Let<span class="err">&#39;</span>s<span class="w"> </span>copy<span class="w"> </span>contents<span class="w"> </span>of<span class="w"> </span>data<span class="w"> </span>directory<span class="w"> </span><span class="k">in</span><span class="w"> </span>that<span class="w"> </span>directory
+<span class="gp"># </span>Let<span class="err">&#39;</span>s<span class="w"> </span>copy<span class="w"> </span>the<span class="w"> </span>contents<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>data<span class="w"> </span>directory<span class="w"> </span><span class="k">in</span><span class="w"> </span>that<span class="w"> </span>directory
 
 <span class="go">singularity exec fastqc.sif fastqc test/*fastq.gz</span>
 
