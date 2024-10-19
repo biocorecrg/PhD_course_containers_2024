@@ -117,7 +117,7 @@ Same as:
 
 Syntax: **--file / -f**
 
-**.** stands for the context (in this case, the current directory) of the build process. This makes sense if copying files from the filesystem, for instance. **IMPORTANT**: Avoid contexts (directories) overpopulated with files (even if they are not actually used in the recipe).
+**.** stands for the build process's context (in this case, the current directory). This makes sense if copying files from the filesystem, for instance. **IMPORTANT**: Avoid contexts (directories) overpopulated with files (even if they are not used in the recipe).
 
 You can define a specific name for the image during the build process.
 
