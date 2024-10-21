@@ -242,18 +242,19 @@ If it is run with the argument <strong>hello moon</strong> it will execute <cite
 <p>A more complex recipe (save it in a text file named <strong>Dockerfile</strong>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">FROM</span> <span class="n">ubuntu</span><span class="p">:</span><span class="mf">24.04</span>
 
-<span class="n">MAINTAINER</span> <span class="n">Toni</span> <span class="n">Hermoso</span> <span class="n">Pulido</span> <span class="o">&lt;</span><span class="n">toni</span><span class="o">.</span><span class="n">hermoso</span><span class="nd">@crg</span><span class="o">.</span><span class="n">eu</span><span class="o">&gt;</span>
-
-<span class="n">WORKDIR</span> <span class="o">~</span>
+<span class="n">WORKDIR</span> <span class="o">/</span><span class="n">data</span>
 
 <span class="n">RUN</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">update</span> <span class="o">&amp;&amp;</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="o">-</span><span class="n">y</span> <span class="n">upgrade</span>
 <span class="n">RUN</span> <span class="n">apt</span><span class="o">-</span><span class="n">get</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">wget</span>
 
 <span class="n">ENTRYPOINT</span> <span class="p">[</span><span class="s2">&quot;/usr/bin/wget&quot;</span><span class="p">]</span>
-<span class="n">CMD</span> <span class="p">[</span><span class="s2">&quot;https://cdn.wp.nginx.com/wp-content/uploads/2016/07/docker-swarm-hero2.png&quot;</span><span class="p">]</span>
+<span class="n">CMD</span> <span class="p">[</span><span class="s2">&quot;https://upload.wikimedia.org/wikipedia/commons/4/4d/Cat_November_2010-1a.jpg&quot;</span><span class="p">]</span>
 </pre></div>
 </div>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">docker run f9f41698e2f8 https://cdn-images-1.medium.com/max/1600/1*_NQN6_YnxS29m8vFzWYlEg.png</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">docker build -t downloadimg .</span>
+<span class="go">mkdir images</span>
+<span class="go">docker run -v $(pwd)/images:/data downloadimg</span>
+<span class="go">docker run -v $(pwd)/images:/data downloadimg https://upload.wikimedia.org/wikipedia/commons/1/11/Canis_lupus_familiaris.002_-_Monfero.jpg</span>
 </pre></div>
 </div>
 </section>
@@ -269,7 +270,7 @@ If it is run with the argument <strong>hello moon</strong> it will execute <cite
 <h3>Build exercise<a class="headerlink" href="#build-exercise" title="Link to this heading"></a></h3>
 <ul class="simple">
 <li><p>Random numbers</p></li>
-<li><p>Copy the following short bash script in a file called random_numbers.bash.</p></li>
+<li><p>Copy the following short bash script in a file called random_numbers.sh.</p></li>
 </ul>
 <div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="gp">#</span>!/usr/bin/bash
 <span class="go">seq 1 1000 | shuf | head -$1</span>
@@ -292,11 +293,13 @@ If it is run with the argument <strong>hello moon</strong> it will execute <cite
 <span class="c1"># Copy script from host to image</span>
 <span class="n">COPY</span> <span class="n">random_numbers</span><span class="o">.</span><span class="n">bash</span> <span class="o">.</span>
 
-<span class="c1"># Make script executable</span>
+<span class="c1"># Make script executable (optional)</span>
+<span class="c1"># Alternative ways to do this: https://stackoverflow.com/questions/56558570/copying-files-with-execute-permissions-in-docker-image</span>
 <span class="n">RUN</span> <span class="n">chmod</span> <span class="o">+</span><span class="n">x</span> <span class="n">random_numbers</span><span class="o">.</span><span class="n">bash</span>
 
-<span class="c1"># As the container starts, &quot;random_numbers.bash&quot; is run</span>
-<span class="n">ENTRYPOINT</span> <span class="p">[</span><span class="s2">&quot;/usr/bin/bash&quot;</span><span class="p">,</span> <span class="s2">&quot;random_numbers.bash&quot;</span><span class="p">]</span>
+<span class="c1"># As the container starts, &quot;random_numbers.sh&quot; is run</span>
+<span class="c1"># If executable /usr/bin/bash not strictly needed</span>
+<span class="n">ENTRYPOINT</span> <span class="p">[</span><span class="s2">&quot;/usr/bin/bash&quot;</span><span class="p">,</span> <span class="s2">&quot;random_numbers.sh&quot;</span><span class="p">]</span>
 
 <span class="c1"># default argument (that can be changed on the command line)</span>
 <span class="n">CMD</span> <span class="p">[</span><span class="s2">&quot;2&quot;</span><span class="p">]</span>
