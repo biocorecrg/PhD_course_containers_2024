@@ -189,6 +189,7 @@ Run container as daemon (in background) with a given name
 
 .. code-block:: console
 
+  docker run -it --detach --name myubuntu ubuntu:22.04
   docker run --detach --name myubuntu ubuntu:22.04 tail -f /dev/null
 
 

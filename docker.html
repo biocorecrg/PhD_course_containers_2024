@@ -230,7 +230,8 @@
 </pre></div>
 </div>
 <p>Run container as daemon (in background) with a given name</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">docker run --detach --name myubuntu ubuntu:22.04 tail -f /dev/null</span>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">docker run -it --detach --name myubuntu ubuntu:22.04</span>
+<span class="go">docker run --detach --name myubuntu ubuntu:22.04 tail -f /dev/null</span>
 </pre></div>
 </div>
 </section>
