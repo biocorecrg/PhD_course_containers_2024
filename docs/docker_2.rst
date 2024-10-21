@@ -217,21 +217,22 @@ A more complex recipe (save it in a text file named **Dockerfile**:
 
   FROM ubuntu:24.04
 
-  MAINTAINER Toni Hermoso Pulido <toni.hermoso@crg.eu>
-
-  WORKDIR ~
+  WORKDIR /data
 
   RUN apt-get update && apt-get -y upgrade
   RUN apt-get install -y wget
 
   ENTRYPOINT ["/usr/bin/wget"]
-  CMD ["https://cdn.wp.nginx.com/wp-content/uploads/2016/07/docker-swarm-hero2.png"]
+  CMD ["https://upload.wikimedia.org/wikipedia/commons/4/4d/Cat_November_2010-1a.jpg"]
 
 
 
 .. code-block:: console
 
-  docker run f9f41698e2f8 https://cdn-images-1.medium.com/max/1600/1*_NQN6_YnxS29m8vFzWYlEg.png
+  docker build -t downloadimg .
+  mkdir images
+  docker run -v $(pwd)/images:/data downloadimg
+  docker run -v $(pwd)/images:/data downloadimg https://upload.wikimedia.org/wikipedia/commons/1/11/Canis_lupus_familiaris.002_-_Monfero.jpg
 
 
 docker tag
@@ -249,7 +250,7 @@ Build exercise
 
 * Random numbers
 
-* Copy the following short bash script in a file called random_numbers.bash.
+* Copy the following short bash script in a file called random_numbers.sh.
 
 .. code-block:: console
 
@@ -281,11 +282,13 @@ This script outputs random integers from 1 to 1000; the number of integers selec
   # Copy script from host to image
   COPY random_numbers.bash .
 
-  # Make script executable
+  # Make script executable (optional)
+  # Alternative ways to do this: https://stackoverflow.com/questions/56558570/copying-files-with-execute-permissions-in-docker-image
   RUN chmod +x random_numbers.bash
 
-  # As the container starts, "random_numbers.bash" is run
-  ENTRYPOINT ["/usr/bin/bash", "random_numbers.bash"]
+  # As the container starts, "random_numbers.sh" is run
+  # If executable /usr/bin/bash not strictly needed
+  ENTRYPOINT ["/usr/bin/bash", "random_numbers.sh"]
 
   # default argument (that can be changed on the command line)
   CMD ["2"]
