@@ -24,8 +24,6 @@ As a software:
 
 There is an increasing number of alternative container technologies and providers. Many of them are based on software components originally from the Docker stack, and they usually try to address specific use cases or weak points. For example, **Singularity**, which we introduce later in this course, is focused on HPC environments. 
 
-In another case, **Podman** <https://podman.io> keeps high functional compatibility with Docker but with a different focus on technology (not keeping a daemon) and permissions. **We will use Podman in this course**.
-
 Docker components
 --------------------
 
